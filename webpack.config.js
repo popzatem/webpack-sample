@@ -3,7 +3,6 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
-
 module.exports = {
   mode: "development",
   devtool: "eval-source-map",
@@ -63,9 +62,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./index.html"
     }),
-    new ForkTsCheckerWebpackPlugin()
+    new ForkTsCheckerWebpackPlugin(),
   ],
-  // entry: './src/index.ts',
+  // entry: ['./src/app.ts','./src/scss/main.scss'],
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
   },
